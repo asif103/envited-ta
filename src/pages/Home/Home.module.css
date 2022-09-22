@@ -1,0 +1,77 @@
+.titleSection{grid-area: titles}
+.imageSection{grid-area: images}
+.buttonSection{grid-area: buttons}
+
+.customContainer{
+    text-align: center;
+ display: grid;
+    grid-template-areas: 'titles'
+    'images'
+    'buttons'
+}
+.title{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    color: #240D57;
+}
+
+.focusTitle{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    background: linear-gradient(90deg, #8456EC 24.2%, #E87BF8 120.46%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.subtitle{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    color: #4F4F4F;
+}
+
+.createButton{
+    background: linear-gradient(90deg, #8456EC 3.25%, #E87BF8 100%);
+    border-radius: 10px;
+    padding: 16px 25px;
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+.createButton:hover{
+    color: #ffffff;
+    background: linear-gradient(45deg, #8456EC 3.25%, #E87BF8 100%);
+}
+.bannerImage{
+    max-width: 440px;
+}
+
+
+@media only screen and (max-width: 375px){
+ .title, .focusTitle{
+     font-size: 36px;
+     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+     line-height: 36px;
+ }
+    .subtitle{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 376px){
+
+}
+@media only screen and (min-width: 960px){
+    .customContainer{
+        text-align: center;
+        display: grid;
+        grid-template-areas: 'images titles'
+                                'images buttons';
+        height: 100vh;
+        align-content: center;
+    }
+}
